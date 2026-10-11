@@ -97,13 +97,12 @@ document.addEventListener("DOMContentLoaded", () => {
   if (letsTalkBtn) {
     letsTalkBtn.addEventListener("click", openContactForm);
   }
-  // 5. Contact form demo submission
+// 5. Contact form submission using Formspree
   const contactForm = document.getElementById("contactForm");
   const formStatus = document.getElementById("form-status");
 
   if (contactForm) {
-    contactForm.addEventListener("submit", (event) => {
-      // Prevent page reload and email-app opening.
+    contactForm.addEventListener("submit", async (event) => {
       event.preventDefault();
 
       if (!contactForm.checkValidity()) {
@@ -112,10 +111,37 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       if (formStatus) {
-        formStatus.textContent =
-          "🎉 Thank you! Your form demo was submitted successfully.";
+        formStatus.textContent = "Sending your message...";
+      }
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: "POST",
+          body: new FormData(contactForm),
+          headers: {
+            Accept: "application/json"
+          }
+        });
+
+        if (response.ok) {
+          if (formStatus) {
+            formStatus.textContent =
+              "🎉 Your message has been sent successfully!";
+          }
+
+          contactForm.reset();
+        } else {
+          if (formStatus) {
+            formStatus.textContent =
+              "Sorry, your message could not be sent. Please try again.";
+          }
+        }
+      } catch (error) {
+        if (formStatus) {
+          formStatus.textContent =
+            "Connection error. Please check your internet and try again.";
+        }
       }
     });
   }
-
 });
