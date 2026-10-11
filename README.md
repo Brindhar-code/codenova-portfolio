@@ -62,6 +62,7 @@ codenova-portfolio/
 - GitHub: https://github.com/Brindhar-code
 - LinkedIn: https://www.linkedin.com/in/brindha-r-471429421/
 - LeetCode: https://leetcode.com/u/Brindha_R_/
+
 🎯 Project Goal
 
 The goal of this project is to build a professional online presence, showcase my technical skills, and demonstrate my practical learning in frontend development.
