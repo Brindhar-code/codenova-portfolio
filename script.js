@@ -74,24 +74,36 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  // 4. Let's Talk: show the hidden contact form when clicked
+  // 4. Contact buttons: open the same hidden contact form
   const letsTalkBtn = document.getElementById("letsTalkBtn");
   const contactSection = document.getElementById("contact");
 
-  if (letsTalkBtn && contactSection) {
-    letsTalkBtn.addEventListener("click", () => {
-      // Reveal the form only after the button is clicked.
-      contactSection.hidden = false;
+  function openContactForm(event) {
+    if (event) event.preventDefault();
 
-      // Scroll to the contact form.
-      contactSection.scrollIntoView({
-        behavior: window.matchMedia(
-          "(prefers-reduced-motion: reduce)"
-        ).matches ? "auto" : "smooth",
-        block: "start"
-      });
+    if (!contactSection) return;
+
+    // Reveal the form
+    contactSection.hidden = false;
+
+    // Scroll to the contact form
+    contactSection.scrollIntoView({
+      behavior: window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches ? "auto" : "smooth",
+      block: "start"
     });
   }
+
+  // Let's Talk button
+  if (letsTalkBtn) {
+    letsTalkBtn.addEventListener("click", openContactForm);
+  }
+
+  // Top navigation Contact button
+  document.querySelectorAll('a[href="#contact"]').forEach(button => {
+    button.addEventListener("click", openContactForm);
+  });
 
 
   // 5. Contact form demo submission
