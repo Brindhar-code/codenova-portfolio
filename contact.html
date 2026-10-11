@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me | Brindha</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="index.html">MyPortfolio<span>.</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#projects">Projects</a>
+    </nav>
+  </header>
+
+  <section class="section contact-page">
+    <p class="eyebrow">LET'S CONNECT</p>
+    <h2>Contact Me </h2>
+    <p>Have a project idea or an opportunity? I'd love to hear from you!</p>
+    <form class="contact-form" id="contactForm">
+      <input type="text" name="Name" placeholder="Your name" required>
+      <input type="email" name="Email" placeholder="Your email" required>
+      <textarea name="Message" placeholder="Write your message..."
+            rows="5" required></textarea>
+      <button class="btn" type="submit">Send Message ↗</button>
+      <p id="formStatus" role="status"></p>
+    </form>
+
+    <script>
+      const form = document.getElementById("contactForm");
+      const status = document.getElementById("formStatus");
+
+      form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      status.textContent =
+        "🎉 Thank you! Your form demo was submitted successfully.";
+
+      form.reset();
+      });
+    </script>
+    
+
+    <a class="back-link" href="index.html">← Back to Home</a>
+  </section>
+</body>
+</html>

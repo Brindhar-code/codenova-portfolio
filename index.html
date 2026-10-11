@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Brindha's creative portfolio showcasing web development skills, projects, and achievements.">
+  <title>Brindha | Creative Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <a class="logo" href="#home">MyPortfolio<span>.</span></a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="#skills">Skills</a>
+      <a href="#achievements">Achievements</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <p class="eyebrow">WELCOME TO MY DIGITAL WORLD</p>
+
+      <h1>Hello, I'm <span>Brindha!</span></h1>
+
+      <h2 class="typing-line">
+        I'm a <span id="typing-text">Developer</span>
+      </h2>
+
+      <p class="intro">
+        I enjoy learning new technologies and turning creative
+        ideas into practical digital experiences.
+      </p>
+
+      <div class="profile-frame">
+        <img src="images/brindha.jpeg" alt="Brindha's profile photo">
+      </div>
+
+      <div class="hero-buttons">
+        <a class="btn" href="#projects">Explore My Projects ↗</a>
+
+        <a class="btn resume-btn"
+           href="PROFESSIONAL RESUME.pdf"
+           download>
+          ↓ Download My Resume
+        </a>
+
+        
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+      <p class="eyebrow">GET TO KNOW ME</p>
+      <h2>About Me</h2>
+
+      <p>
+        Hi! I'm Brindha, a second-year engineering student at
+        VSB College of Engineering Technical Campus. I'm interested
+        in frontend development, artificial intelligence, and
+        creating attractive, responsive websites using HTML, CSS,
+        and JavaScript. Through projects and hands-on learning,
+        I'm working to strengthen my technical skills and turn
+        creative ideas into practical digital solutions.
+      </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+      <p class="eyebrow">WHAT I'M BUILDING</p>
+      <h2>My Projects</h2>
+
+      <div class="project-grid">
+
+        <article class="project-card">
+          <div class="project-icon">🤖</div>
+          <p class="project-number">PROJECT 01</p>
+          <h3>AI Internship Assistant</h3>
+
+          <p>
+            An AI-powered project that helps connect resume skills
+            with relevant internship opportunities.
+          </p>
+
+          <div class="tech-tags">
+            <span class="tag">AI Project</span>
+            <span class="tag">Resume Matching</span>
+          </div>
+
+          <a class="project-link"
+             href="https://github.com/Brindhar-code/AI-Internship-Recommendation-Agent"
+             target="_blank"
+             rel="noopener noreferrer">
+            View on GitHub ↗
+          </a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-icon">💻</div>
+          <p class="project-number">PROJECT 02</p>
+          <h3>Creative Portfolio</h3>
+
+          <p>
+            A personal website showcasing my skills, projects,
+            learning journey, and creativity.
+          </p>
+
+          <div class="tech-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+
+          <a class="project-link" href="#home">
+            Explore My Journey ↗
+          </a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-icon">🚀</div>
+          <p class="project-number">PROJECT 03</p>
+          <h3>Future Innovation</h3>
+
+          <p>
+            Exploring new ideas and building creative web experiences
+            as I grow as a developer.
+          </p>
+
+          <div class="tech-tags">
+            <span class="tag">Web Development</span>
+            <span class="tag">Coming Soon</span>
+          </div>
+
+          <a class="project-link" href="#contact">
+            Let's Collaborate ↗
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+<!-- Hidden Contact Form -->
+<section class="section contact" id="contact" hidden>
+  <p class="eyebrow">LET'S CONNECT</p>
+  <h2>Have an idea? Let's talk!</h2>
+
+  <p class="section-description">
+    I'm excited to connect, share ideas, and explore new opportunities.
+  </p>
+
+  <form class="contact-form" id="contactForm">
+    <input
+      type="text"
+      id="contact-name"
+      name="name"
+      placeholder="Your Name"
+      required
+    >
+
+    <input
+      type="email"
+      id="contact-email"
+      name="email"
+      placeholder="Your Email"
+      required
+    >
+
+    <textarea
+      id="contact-message"
+      name="message"
+      placeholder="Your Message"
+      rows="5"
+      required
+    ></textarea>
+
+    <button type="submit" class="btn">Send Message ↗</button>
+    <p id="form-status" role="status"></p>
+  </form>
+</section>
+<!-- Connect With Me -->
+<div class="connect-intro">
+  <p class="eyebrow">LET'S CREATE SOMETHING GREAT</p>
+  <h2>Have an idea? Let's turn it into something amazing. 🚀</h2>
+  <p>
+    Explore my work, connect with me, or let's create
+    something meaningful together.
+  </p>
+</div>
+<!-- Contact and Social Buttons -->
+<div class="social-links">
+
+  <button type="button" class="social-btn" id="letsTalkBtn">
+    ✉ Let's Talk ↗
+  </button>
+
+  <a class="social-btn"
+     href="https://github.com/Brindhar-code"
+     target="_blank"
+     rel="noopener noreferrer">
+    ⌘ GitHub ↗
+  </a>
+
+  <a class="social-btn"
+     href="https://www.linkedin.com/in/brindha-r-471429421/"
+     target="_blank"
+     rel="noopener noreferrer">
+    in LinkedIn ↗
+  </a>
+
+</div>
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+      <div class="skills-container">
+
+        <p class="section-tag">WHAT I WORK WITH</p>
+
+        <h2 class="skills-heading">
+          My Creative <span>Toolkit</span>
+        </h2>
+
+        <p class="skills-description">
+          Technologies and tools I use to turn ideas into reality.
+        </p>
+
+        <div class="skills-grid">
+
+          <div class="skill-card">
+            <div class="skill-icon html-icon">5</div>
+            <h3>HTML5</h3>
+            <p>Web Structure</p>
+            <span class="skill-tag">Frontend</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon css-icon">✦</div>
+            <h3>CSS3</h3>
+            <p>Creative Styling</p>
+            <span class="skill-tag">Frontend</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon js-icon">JS</div>
+            <h3>JavaScript</h3>
+            <p>Interactive Web</p>
+            <span class="skill-tag">Frontend</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon python-icon">Py</div>
+            <h3>Python</h3>
+            <p>Programming</p>
+            <span class="skill-tag">Language</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon java-icon">J</div>
+            <h3>Java</h3>
+            <p>Application Development</p>
+            <span class="skill-tag">Language</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon flask-icon">F</div>
+            <h3>Flask</h3>
+            <p>Web Applications</p>
+            <span class="skill-tag">Backend</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon git-icon">⌘</div>
+            <h3>Git & GitHub</h3>
+            <p>Version Control</p>
+            <span class="skill-tag">Tools</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon sql-icon">DB</div>
+            <h3>SQL</h3>
+            <p>Database Basics</p>
+            <span class="skill-tag">Database</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="section achievements" id="achievements">
+      <p class="eyebrow">MY LEARNING JOURNEY</p>
+
+      <h2>Certifications & Achievements</h2>
+
+      <p class="achievement-intro">
+        Every course and project helps me turn curiosity into practical skills.
+      </p>
+
+      <div class="achievement-grid">
+
+        <article class="achievement-card">
+          <div class="achievement-icon">🏆</div>
+          <p class="achievement-label">CERTIFICATION</p>
+          <h3>Introduction to IoT</h3>
+
+          <p>
+            NPTEL course completed with 84%, building my understanding
+            of Internet of Things concepts.
+          </p>
+
+          <span class="achievement-tag">NPTEL · 84%</span>
+        </article>
+
+        <article class="achievement-card">
+          <div class="achievement-icon">☕</div>
+          <p class="achievement-label">CERTIFICATION</p>
+          <h3>Java Foundations Associate</h3>
+
+          <p>
+            Completed Java Certified Foundations Associate:
+            Development Basics through Infosys Springboard.
+          </p>
+
+          <span class="achievement-tag">Java · Foundations</span>
+        </article>
+
+        <article class="achievement-card">
+          <div class="achievement-icon">🌐</div>
+          <p class="achievement-label">PRACTICAL EXPERIENCE</p>
+          <h3>Web Development</h3>
+
+          <p>
+            Developed web development knowledge and completed
+            a full-stack development internship.
+          </p>
+
+          <span class="achievement-tag">Web · Full Stack</span>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    Designed with curiosity and creativity © 2026
+  </footer>
+
+</body>
+</html>
