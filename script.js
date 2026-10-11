@@ -48,15 +48,19 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  // 3. Smooth scrolling for normal in-page links
+// 3. Smooth scrolling and Contact navigation
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener("click", (event) => {
       const targetId = link.getAttribute("href");
 
       if (!targetId || targetId === "#") return;
 
-      // The Let's Talk button is handled separately below.
-      if (link.id === "letsTalkBtn") return;
+      // Open the hidden form when Contact is clicked
+      if (targetId === "#contact") {
+        event.preventDefault();
+        openContactForm();
+        return;
+      }
 
       const target = document.getElementById(targetId.slice(1));
 
@@ -73,20 +77,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-
-  // 4. Contact buttons: open the same hidden contact form
+  // 4. Both contact buttons open the same form
   const letsTalkBtn = document.getElementById("letsTalkBtn");
   const contactSection = document.getElementById("contact");
 
-  function openContactForm(event) {
-    if (event) event.preventDefault();
-
+  function openContactForm() {
     if (!contactSection) return;
 
-    // Reveal the form
     contactSection.hidden = false;
 
-    // Scroll to the contact form
     contactSection.scrollIntoView({
       behavior: window.matchMedia(
         "(prefers-reduced-motion: reduce)"
@@ -95,17 +94,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Let's Talk button
   if (letsTalkBtn) {
     letsTalkBtn.addEventListener("click", openContactForm);
   }
-
-  // Top navigation Contact button
-  document.querySelectorAll('a[href="#contact"]').forEach(button => {
-    button.addEventListener("click", openContactForm);
-  });
-
-
   // 5. Contact form demo submission
   const contactForm = document.getElementById("contactForm");
   const formStatus = document.getElementById("form-status");
